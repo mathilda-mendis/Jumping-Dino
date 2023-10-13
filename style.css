@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('items/dinobg.png');
+  }
+  
+  .game-container {
+    position: relative;
+    width: 890px;
+    height: 300px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('items/bg.png'); 
+    background-size: auto 100%; 
+    background-position: 0 0;
+    animation: moveBackground 55s linear infinite;
+  }
+  
+  @keyframes moveBackground {
+     100% { 
+      background-position: 0 0; 
+    }
+    0% { 
+      background-position: -200000% 0; 
+    } 
+  }
+  
+  .dino {  
+    position: absolute;
+    bottom: 0;    
+    left: 50px;
+    width: 40px;
+    height: 40px; 
+    
+  }
+  
+
+
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    width: 80px;
+    height: 40px;
+    
+    animation: moveAndSpinObstacle 4s linear infinite;  }
+  
+    @keyframes moveAndSpinObstacle {
+        0% {
+          transform: translateX(100vw) rotate(720deg); 
+        }
+        100% {
+          transform: translateX(-1200%) rotate(0deg); 
+        }
+  }
+
+
+
+    
